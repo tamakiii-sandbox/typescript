@@ -2,6 +2,7 @@ const path = require('path')
 
 module.exports = {
   mode: 'production',
+  devtool: 'source-map',
   entry: [
     path.resolve(__dirname, 'src/index.tsx')
   ],
@@ -11,14 +12,18 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve('./src'), path.resolve('./node_modules')],
-    extensions: ['.ts', '.tsx', '.js', '.jsx']
-
+    extensions: ['.ts', '.tsx', '.js', '.jsx', 'json']
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
         loader: 'ts-loader'
+      },
+      {
+        test: /\.js$/,
+        loader: 'source-map-loader',
+        enforce: 'pre'
       }
     ]
   }
