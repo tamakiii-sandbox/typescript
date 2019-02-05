@@ -1,0 +1,9 @@
+{
+  "name": "typescript-sandbox",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:tamakiii-sandbox/typescript-sandbox.git",
+  "author": "tamakiii <tamakiii@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true
+}
