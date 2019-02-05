@@ -1,7 +1,16 @@
-function greeter(person: string) {
-    return "Hello, " + person;
-}
+import * as greeter from "./greeter";
+import * as number from "./number";
+import * as array from "./array";
+import * as enm from "./enum";
 
-let user = "Jane User";
+const results = [
+  greeter.result,
+  number.result,
+  array.result,
+  enm.result,
+];
 
-document.body.innerHTML = greeter(user);
+results.map((result) => {
+  document.querySelector("#app").innerHTML += '<h2>' + result.label + '</h2>'
+  document.querySelector("#app").innerHTML += '<textarea readonly>' + result.output + '</textarea>'
+});
